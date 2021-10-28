@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>インスタンスプラクティス</title>
+  </head>
+  <body>
+    <div id="app1">
+      {{ message }}
+    </div>
+    <div id="app2">
+          <hello></hello>
+      <hello></hello>
+      <p>{{ message }}</p>
+      <button @click="changeMessage">インスタンスの変更</button>
+    </div>
+    <div id="app3">
+          <hello></hello>
+      <hello></hello>
+      <p>{{ message }}</p>
+      <p>{{ name }}</p>
+      <p>{{ myData }}</p>
+      <button @click="name = 'ボタンから変更しました'">変更ボタン</button>
+    </div>
+    <div id="app4">
+
+    </div>
+    <div id="app5"></div>
+    <!-- div#app6 + tabで雛形が作れる -->
+    <div id="app6">
+      <h1>こんにちは{{ name }}さん</h1>
+      <button @click="name = '太郎'">名前を変更</button>
+      <button @click="destroy">インスタンスを破壊する</button>
+      <hello></hello>
+      <hello></hello>
+    </div>
+
+    <!-- div.hello + tabで雛形(クラス指定)が作れる -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
